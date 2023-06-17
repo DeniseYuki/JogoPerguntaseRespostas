@@ -19,16 +19,16 @@
         <img src="/Unknown.jpeg" alt="perguntando" style="height: 105px; width: 105px;">
         <div class="card-body">
           <h5 class="card-title">Questão 3</h5>
-          <p class="card-text"> Qual é a linguagem de programação que não é usada para Análise de Dados?</p>
+          <p class="card-text"> Quanto é 5 + 5 ?</p>
 
-            <input type="radio" id="python" name="fav_language" value="PYTHON">
-            <label for="python">Python</label><br>
-            <input type="radio" id="java" name="fav_language" value="JAVA">
-            <label for="java">Java</label><br>
-            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-            <label for="javascript">JavaScript</label><br>
-            <input type="radio" id="csharp" name="fav_language" value="Csharp">
-            <label for="csharp">C#</label><br><br>
+            <input type="radio" id="dez" name="fav_language" value="dez">
+            <label for="dez">10</label><br>
+            <input type="radio" id="vinteecinco" name="fav_language" value="vinteecinco">
+            <label for="vinteecinco">25</label><br>
+            <input type="radio" id="cinquentaecinco" name="fav_language" value="cinquentaecinco">
+            <label for="cinquentaecinco"> 55</label><br>
+            <input type="radio" id="cinco" name="fav_language" value="cinco">
+            <label for="cinco">5</label><br><br>
 
           <a href="/pergunta4.html" class="btn btn-primary" onclick="verificarAcerto()"> Verificar acerto</a>
         </div>
@@ -38,6 +38,26 @@
 
 </div>
 </form>
+
+
+<script>
+  let ponto = 0;
+  
+  function verificarAcerto() {
+      const selectedLanguage = document.querySelector('input[name="fav_language"]:checked');
+      
+      if (selectedLanguage && selectedLanguage.value === "dez") {
+          ponto++;
+          window.alert("Você acertou! Pontuação atual: " + ponto);
+          window.location.href = "/pergunta3.html"; // Redirecionar para a próxima pergunta
+      } else {
+          window.alert("Você errou");
+      }
+  }
+  
+  </script>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
