@@ -29,7 +29,7 @@
             <label for="javascript">JavaScript</label><br>
             <input type="radio" id="csharp" name="fav_language" value="Csharp">
             <label for="csharp">C#</label><br><br>
-          <a href="/pergunta2.html" class="btn btn-primary"> Verificar acerto</a>
+          <a href="/pergunta2.html" class="btn btn-primary" onclick="verificarAcerto()" > Verificar acerto</a>
         
         
         
@@ -42,16 +42,18 @@
 </div>
 </form>
 <script>
-ponto = 0;
-while(ponto < 10){
-if(label == "python"){
-    ponto++
+let ponto = 0;
 
-}
-else{
-  Window.alert("Você errou")
-  break;
-}
+function verificarAcerto() {
+    const selectedLanguage = document.querySelector('input[name="fav_language"]:checked');
+    
+    if (selectedLanguage && selectedLanguage.value === "PYTHON") {
+        ponto++;
+        window.alert("Você acertou! Pontuação atual: " + ponto);
+        window.location.href = "/pergunta2.html"; // Redirecionar para a próxima pergunta
+    } else {
+        window.alert("Você errou");
+    }
 }
 
 </script>
