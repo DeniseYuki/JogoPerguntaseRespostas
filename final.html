@@ -35,17 +35,12 @@
 <script>
 let totalPontos = 0;
 
-function totalDePontos(){
-  
-
-}
-
-
-
-function verificar(resposta){
-}
-
-
+window.addEventListener("load",function()
+{
+  const pontuacao = localStorage.getItem("ponto");
+  document.getElementById("pontuacao").textContent = pontuacao || "0";
+})
+;
 
 
 </script>

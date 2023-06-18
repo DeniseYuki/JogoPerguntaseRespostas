@@ -46,13 +46,20 @@
       const selectedLanguage = document.querySelector('input[name="fav_language"]:checked');
       
       if (selectedLanguage && selectedLanguage.value === "JAVA") {
-          ponto++;
-          window.alert("Você acertou! Pontuação atual: " + ponto);
-          window.location.href = "/pergunta3.html"; // Redirecionar para a próxima pergunta
-      } else {
-          window.alert("Você errou");
-      }
-  }
+         let ponto = parseInt(localStorage.getItem("ponto") || "0");
+        ponto++;
+        localStorage.setItem("ponto", ponto.toString());
+        window.alert("Você acertou! Pontuação atual: " + ponto);
+        window.location.href = "/pergunta2.html"; 
+    } else {
+        window.alert("Você errou");
+    }
+}
+
+window.addEventListener("load", function() {
+            localStorage.setItem("ponto", "0"); 
+
+});
   
   </script>
 
