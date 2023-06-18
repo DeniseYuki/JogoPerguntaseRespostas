@@ -19,26 +19,22 @@
         <img src="/Unknown.jpeg" alt="perguntando" style="height: 105px; width: 105px;">
         <div class="card-body">
           <h5 class="card-title">A sua pontuação total é: </h5>
-          <p class="card-text"> pontuação: </p>
+          <p class="card-text" id="pontuacao"> pontuação:  </p>
 
           <a href="/index.html" class="btn btn-primary"> Jogar novamente!</a>
         </div>
       </div>
-
-    <div class="card">
-
 </div>
 </form>
 
 
 
 <script>
-let totalPontos = 0;
-
 window.addEventListener("load",function()
 {
   const pontuacao = localStorage.getItem("ponto");
   document.getElementById("pontuacao").textContent = pontuacao || "0";
+
 })
 ;
 
